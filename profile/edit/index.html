@@ -14,7 +14,7 @@
     <script src="/src/js/index.mjs"></script>
     <!-- Index content here with login/register -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="index.html">NOROFFA</a>
+      <a class="navbar-brand ms-2 display-3" href="/index.html">NOROFFA</a>
       <button
         class="navbar-toggler"
         type="button"
@@ -29,11 +29,6 @@
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <!-- <li class="nav-item active">
-            <a class="nav-link" href="#"
-              >Home <span class="sr-only">(current)</span></a
-            >
-          </li> -->
           <li class="nav-item dropdown">
             <a
               class="nav-link dropdown-toggle"
@@ -56,27 +51,30 @@
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" href="#">Login</a>
+            <a class="nav-link" href="/profile/login/index.html">Login</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Posts</a>
+            <a class="nav-link" href="/feed/index.html">Posts</a>
           </li>
-
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input
-            class="form-control mr-sm-2"
-            type="search"
-            placeholder="Search"
-            aria-label="Search"
-          />
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-            Search
-          </button>
-        </form>
+        <div class="">
+          <form class="form-inline my-2 my-lg-0 d-flex align-items-center"">
+            <input
+            class="form-control mr-sm-2 flex-grow-1"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button
+              class="btn btn-outline-success my-2 mr-sm-2"
+              type="submit"
+            >
+              Search
+            </button>
+          </form>
+        </div>
       </div>
-    </nav>
-    
+    </nav>    
 
     
     <footer class="bg-light text-center text-lg-start">
