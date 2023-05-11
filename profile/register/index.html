@@ -75,53 +75,85 @@
         </form>
       </div>
     </nav>
-    <div class="row justify-content-center">
-      <div class="col-12 col-md-6">
-        <form class="form-control-lg row" id="registerForm">
-          <input
-            class="m-2"
-            type="text"
-            name="name"
-            id="name"
-            placeholder="Name"
-            required
-            pattern="^[\w]+$"
-            maxlength="20"
-            title="Can only be upper/lower case letters, numbers and underscore (_) Example: My_User1234"
-          />
+    <main class="flex-grow-1 bg-dark text-light">
+      <div class="row justify-content-center">
+        <div class="container-fluid">
+          <div class="col-12 col-md-6">
+            <form class="form-control-lg row" id="registerForm method="post" action="/auth/register">
+              <div class="form-group mb-3">
+                <label for="">Name</label>
+                <input
+                  class="form-control"
+                  type="text"
+                  name="name"
+                  required
+                  pattern="^[\w]+$"
+                  maxlength="20"
+                  title="Can only be upper/lower case letters, numbers and underscore (_) Example: My_User1234"
+                />
+              </div>
 
-          <input
-            class="m-2"
-            type="email"
-            name="email"
-            id="email"
-            placeholder="user@example.com"
-            required
-            pattern="^[\w\-.]+@(stud\.)?noroff\.no$"
-            title="Can only be a noroff email. Example: user@noroff.no or user@stud.noroff.no"
-          />
+              <div class="form-group mb-3">
+                <label for="">Email</label>
+                <input
+                  class="form-control"
+                  type="email"
+                  name="email"
+                  required
+                  pattern="^[\w\-.]+@(stud\.)?noroff\.no$"
+                  title="Can only be a noroff email. Example: user@noroff.no or user@stud.noroff.no"
+                />
+              </div>
 
-          <input
-            class="m-2"
-            type="password"
-            name="password"
-            id="password"
-            placeholder="Password"
-            required
-            minlength="8"
-          />
-          <button class="m-2 bg-primary text-white">Register</button>
-        </form>
+              <div class="form-group mb-3">
+                <label for="">Password</label>
+                <input
+                  class="form-control"
+                  type="password"
+                  name="password"
+                  required
+                  minlength="8"
+                />
+              </div>
+              <div class="form-group mb-3">
+                <label for="">Banner</label>
+                <input
+                  class="form-control"
+                  type="url"
+                  name="banner"
+                />
+              </div>
+              <div class="form-group mb-3">
+                <label for="">Avatar</label>
+                <input
+                  class="form-control"
+                  type="url"
+                  name="avatar"
+                />
+              </div>
+              <!-- <div class="form-group mb-3">
+            <label for="">Banner</label>
+            <input class="form-control" type="URL" name="banner" />
+          </div>
+
+          <div class="form-group mb-3">
+            <label for="">Avatar</label>
+            <input class="form-control" type="URL" name="avatar" />
+          </div> -->
+
+              <button class="btn btn-success">Register</button>
+            </form>
+          </div>
+        </div>
       </div>
-    </div>
-    <!-- {
+      <!-- {
         "name": "ElPcPJz7uiXzzq4cBq6j",
         "email": "user@example.com",
         "banner": "string",
         "avatar": "string",
         "password": "stringst"
       } -->
-
+    </main>
     <footer class="bg-light text-center text-lg-start">
       <!-- Copyright -->
       <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
