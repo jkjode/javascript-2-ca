@@ -1,6 +1,21 @@
 import { API_SOCIAL_URL } from "../constants.mjs";
 
-export async function register(profile, action, method) {
+const action = "/auth/register";
+const method = "post";
+
+export async function register(profile) {
   const registerURL = API_SOCIAL_URL + action;
-  console.log(registerURL);
+  const body = JSON.stringify(profile);
+
+  const response = await fetch(registerURL, {
+    headers: {
+      "Content-Type": "application/json",
+    },
+    method,
+    body,
+  });
+
+  const result = await response.json();
+  alert("You have successfully registered");
+  return result;
 }
