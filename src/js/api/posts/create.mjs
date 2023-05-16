@@ -2,7 +2,6 @@ import { authFetch } from "../authFetch.mjs";
 import { API_SOCIAL_URL } from "../../api/constants.mjs";
 import { load } from "../../storage/index.mjs";
 
-
 const action = "/posts";
 const method = "post";
 

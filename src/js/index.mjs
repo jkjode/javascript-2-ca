@@ -1,22 +1,24 @@
-import { setRegisterFormListener } from "./handlers/register.mjs";
-import { setLoginFormListener } from "./handlers/login.mjs";
 import * as postMethods from "./api/posts/index.mjs";
 import * as templates from "./templates/index.mjs";
-// import { renderPostTemplates } from "./templates/index.mjs";
+import * as listeners from "./handlers/index.mjs";
 
 const path = location.pathname;
 
 if (path === "/profile/login/index.html") {
-  setLoginFormListener();
+  listeners.setLoginFormListener();
 } else if (path === "/profile/register/index.html") {
-  setRegisterFormListener();
+  listeners.setRegisterFormListener();
+} else if (path === "/post/create/") {
+  listeners.setCreatePostListener();
+} else if (path === "/post/update/") {
+  listeners.setUpdatePostListener();
 }
 
-async function testTemplate() {
-  const posts = await postMethods.getPosts();
-  // const post = posts.pop(); 
-  const container = document.querySelector("#post");
-  templates.renderPostTemplates(posts, container);
-}
+// async function testTemplate() {
+//   const posts = await postMethods.getPosts();
+//   // const post = posts.pop();
+//   const container = document.querySelector("#post");
+//   templates.renderPostTemplates(posts, container);
+// }
 
-testTemplate();
+// testTemplate();
