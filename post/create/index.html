@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
-      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+      href="/node_modules/bootstrap/dist/css/bootstrap.css"
     />
-    <title>NOROFFA</title>
+    <title>NOROFFA - Create Post</title>
   </head>
   <body>
     <script type="module" src="/src/js/index.mjs" defer></script>
@@ -77,41 +77,48 @@
         </div>
       </nav>
       <main class="bg-dark text-light h-100">
-        <div
-          class="container d-flex justify-content-center align-items-center flex-column"
-          style="height: 50vh"
-        >
-          <div
-            class="d-flex flex-column justify-content-center"
-            style="height: 100vh"
-          >
-            <div class="d-flex flex-row">
-              <a
-                href="/profile/login/index.html"
-                class="btn btn-lg btn-success mx-4"
-                >Login</a
-              >
-              <a
-                href="/profile/register/index.html"
-                class="btn btn-lg btn-success mx-4"
-                >Register</a
-              >
-            </div>
-          </div>
-        </div>
 
-        <!-- <div class="d-flex justify-content-center">
-          <div class="d-flex flex-row">
-            <a href="/profile/login/index.html" class="btn btn-success mx-4"
-              >login</a
-            >
-            <a href="/profile/register/index.html" class="btn btn-success mx-4"
-              >Register</a
-            >
-          </div>
-          <div class="mt-auto"></div>
-        </div> -->
-      </main>
+<!-- Main content  - Edit post page -->
+
+<!-- {
+    "title": "string",
+    "body": "string",
+    "tags": [
+      "string"
+    ],
+    "media": "string"
+  } -->
+
+<div class="container-fluid">
+    <div class="col-12 col-md-6">
+        <form class="form-control-lg row" id="createPost">
+            <div class="form-group mb-3">
+                <label for="">Title</label>
+                <input class="form-control" type="text" name="title" required/>
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="">Text</label>
+                <textarea class="form-control" name="body" required></textarea>
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="">Tags</label>
+                <input class="form-control" type="text" name="tags"/>
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="">Media</label>
+                <input class="form-control" type="url" name="media"/>
+            </div>
+
+            <button class="btn btn-success btn-lg col-sm-2 col-xs-12">Create Post</button  >
+
+        </form>
+    </div>
+</div>
+
+    </main>
       <footer class="bg-light text-center text-lg-start fixed-bottom">
         <!-- Copyright -->
         <div
