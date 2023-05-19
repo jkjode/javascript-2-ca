@@ -13,13 +13,12 @@ if (path === "/profile/login/") {
 } else if (path === "/post/update/") {
   listeners.setUpdatePostListener();
 } else if (path === "/post/index.html") {
+  async function testTemplate() {
+    const posts = await postMethods.getPosts();
+    console.log(posts);
+    const container = document.querySelector("#posts");
+    templates.renderPostTemplates(posts, container);
+  }
 
-async function testTemplate() {
-  const posts = await postMethods.getPosts();
-  console.log(posts);
-  const container = document.querySelector("#posts");
-  templates.renderPostTemplates(posts, container);
-}
-
-testTemplate();
+  testTemplate();
 }
