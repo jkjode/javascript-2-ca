@@ -9,9 +9,10 @@
       href="node_modules/bootstrap/dist/css/bootstrap.min.css"
     />
     <title>NOROFFA</title>
+    <script type="module" src="/src/js/index.mjs" defer></script>
+
   </head>
   <body>
-    <script type="module" src="/src/js/index.mjs" defer></script>
     <!-- Index content here with login/register -->
     <div class="bg-dark vh-100">
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -43,8 +44,8 @@
                 Username
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="/profile/index.html">Profile</a>
-                <a class="dropdown-item" href="/profile/edit/index.html"
+                <a class="dropdown-item" href="/profile/">Profile</a>
+                <a class="dropdown-item" href="/profile/edit/"
                   >Edit Profile</a
                 >
                 <div class="dropdown-divider"></div>
@@ -52,10 +53,10 @@
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/profile/login/index.html">Login</a>
+              <a class="nav-link" href="/profile/login/">Login</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/feed/index.html">Posts</a>
+              <a class="nav-link" href="/feed/">Posts</a>
             </li>
           </ul>
           <div class="">
@@ -87,12 +88,12 @@
           >
             <div class="d-flex flex-row">
               <a
-                href="/profile/login/index.html"
+                href="/profile/login/"
                 class="btn btn-lg btn-success mx-4"
                 >Login</a
               >
               <a
-                href="/profile/register/index.html"
+                href="/profile/register/"
                 class="btn btn-lg btn-success mx-4"
                 >Register</a
               >
@@ -115,7 +116,7 @@
       <footer class="bg-light text-center text-lg-start fixed-bottom">
         <!-- Copyright -->
         <div
-          class="text-center p-3"
+          class="text-center"
           style="background-color: rgba(0, 0, 0, 0.2)"
         >
           © 2020 Copyright:

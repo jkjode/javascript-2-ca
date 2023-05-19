@@ -4,7 +4,7 @@ export function setLoginFormListener() {
   const form = document.querySelector("#loginForm");
 
   if (form) {
-    form.addEventListener("submit", (event) => {
+    form.addEventListener("submit", async (event) => {
       event.preventDefault();
       const form = event.target;
       const formData = new FormData(form);
@@ -13,7 +13,14 @@ export function setLoginFormListener() {
       const method = form.method;
 
       // Send data to the API
-      login(profile);
+      try {
+        await login(profile);
+      }
+      catch (error) {
+        // display error message to the user
+      }
+
+      await login(profile);
     });
   }
 }
