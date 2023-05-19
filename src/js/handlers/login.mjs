@@ -29,6 +29,10 @@ export function setLoginFormListener() {
         displayMessage("danger", error, "#message");
         console.log(error);
       }
+      finally {
+        button.innerText = "Login";
+        fieldset.disabled = false;
+      }
 
       await login(profile);
     });
