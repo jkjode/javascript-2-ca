@@ -1,4 +1,7 @@
 import { login } from "../api/auth/login.mjs";
+import displayMessage from "../ui/common/displaymsg.mjs";
+import * as storage from "../storage/index.mjs";
+
 
 export function setLoginFormListener() {
   const form = document.querySelector("#loginForm");
@@ -9,15 +12,22 @@ export function setLoginFormListener() {
       const form = event.target;
       const formData = new FormData(form);
       const profile = Object.fromEntries(formData.entries());
-      const action = form.action;
-      const method = form.method;
+
+      const button = form.querySelector("button");
+      button.innerText = "Logging in...";
+    
+      const fieldset = form.querySelector("fieldset");
+      fieldset.disabled = true;
 
       // Send data to the API
       try {
-        await login(profile);
-      }
-      catch (error) {
-        // display error message to the user
+        const {accessToken, ...user} = await login(profile);
+        storage.save("token", accessToken);
+        storage.save("profile", user);
+        location.href = "/post/";
+      } catch (error) {
+        displayMessage("danger", error, "#message");
+        console.log(error);
       }
 
       await login(profile);

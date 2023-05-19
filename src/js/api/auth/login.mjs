@@ -1,5 +1,4 @@
 import { API_SOCIAL_URL } from "../constants.mjs";
-import * as storage from "../../storage/index.mjs";
 
 const action = "/auth/login";
 const method = "post";
@@ -16,11 +15,17 @@ export async function login(profile) {
     body,
   });
 
-  const { accessToken, ...user } = await response.json();
+  const json = await response.json();
+  if (response.ok) {
+    return json;
+  }
 
-  storage.save("token", accessToken);
+  console.log(json);
 
-  storage.save("profile", user);
+  throw new Error(json.errors[0].message);
 
-  alert("You have successfully logged in!");
+  // const { accessToken, ...user } = await response.json();
+
+
+  // alert("You have successfully logged in!");
 }
