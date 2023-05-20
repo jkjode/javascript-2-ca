@@ -12,6 +12,8 @@ if (path === "/profile/login/") {
   listeners.setCreatePostListener();
 } else if (path === "/post/update/") {
   listeners.setUpdatePostListener();
+} else if (path === "/profiles/update/") {
+  listeners.setUpdateProfileListener();
 } else if (path === "/feed/") {
   async function testTemplate() {
     const posts = await postMethods.getPosts();
