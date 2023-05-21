@@ -1,6 +1,10 @@
 import * as postMethods from "../api/posts/index.mjs";
 import * as templates from "../templates/index.mjs";
 
+/**
+ * @description This function sets the event listeners for the search and filter forms.
+ */
+
 export function setSearchAndFilterListener() {
     setSortTypeListener();
     setFilterByTagListener();

@@ -7,6 +7,11 @@ const path = location.pathname;
 listeners.checkIfLoggedIn(path);
 listeners.logoutHandler();
 
+/**
+ * Handles the logic based on the current path to set up appropriate event listeners and render templates.
+ * @param {string} path - The current path.
+ */
+
 if (path === "/profile/login/") {
   listeners.setLoginFormListener();
 } else if (path === "/profile/register/") {

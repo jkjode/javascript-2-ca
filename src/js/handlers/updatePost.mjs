@@ -1,5 +1,9 @@
 import { getPost, updatePost } from "../api/posts/index.mjs";
 
+/**
+ * @description This function sets the event listeners for updating posts.
+ */
+
 export async function setUpdatePostListener() {
   const form = document.querySelector("#editPost");
 

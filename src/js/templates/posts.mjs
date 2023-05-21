@@ -1,6 +1,17 @@
-export function postTemplateA(postData) {
-  return `<div class="post" id=${postData.id}>${postData.title}</div>`;
-}
+// Decided not to use this template as it was not responsive enough for the project.
+// export function postTemplateA(postData) {
+//   return `<div class="post" id=${postData.id}>${postData.title}</div>`;
+// }
+
+/**
+ * Generates the HTML template for rendering a single post.
+ * @param {Object} postData - The data of the post.
+ * @param {string} postData.title - The title of the post.
+ * @param {string} postData.body - The body content of the post.
+ * @param {string} postData.media - The URL of the post's media (optional).
+ * @param {string[]} postData.tags - The tags associated with the post (optional).
+ * @returns {HTMLElement} The generated post HTML element.
+ */
 
 export function postTemplateB(postData) {
   const postLink = document.createElement("a");
@@ -50,6 +61,12 @@ export function postTemplateB(postData) {
 
   return postLink;
 }
+
+/**
+ * Renders a single post template and appends it to the specified parent element.
+ * @param {Object} postData - The data of the post.
+ * @param {HTMLElement} parent - The parent element to append the post template.
+ */
 
 export function renderPostTemplates(postDataList, parent) {
   parent.innerHTML = "";

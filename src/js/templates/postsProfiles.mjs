@@ -1,5 +1,15 @@
 import * as postMethods from "../api/posts/index.mjs";
 
+/**
+ * Generates the HTML template for rendering a single post.
+ * @param {Object} postData - The data of the post.
+ * @param {string} postData.title - The title of the post.
+ * @param {string} postData.body - The body content of the post.
+ * @param {string} postData.media - The URL of the post's media (optional).
+ * @param {string[]} postData.tags - The tags associated with the post (optional).
+ * @returns {HTMLElement} The generated post HTML element.
+ */
+
 export function postTemplateB(postData) {
   const post = document.createElement("div");
 
@@ -64,6 +74,12 @@ export function postTemplateB(postData) {
   post.append(buttonContainer);
   return post;
 }
+
+/**
+ * Renders the templates for profile posts and appends them to the specified parent element.
+ * @param {Object[]} postDataList - An array of post data objects.
+ * @param {HTMLElement} parent - The parent element to append the post templates.
+ */
 
 export function renderProfilePostsTemplates(postDataList, parent) {
   parent.innerHTML = "";

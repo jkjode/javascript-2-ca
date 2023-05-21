@@ -1,13 +1,15 @@
 import { getProfile, updateProfile } from "../api/profiles/index.mjs";
 
-// import { load } from "../storage/index.mjs";
 import * as storage from "../storage/index.mjs";
+
+/**
+ * @description This function sets the event listeners for updating the user profile.
+ */
 
 export async function setUpdateProfileListener() {
   const form = document.querySelector("#editProfile");
 
   if (form) {
-    // const { name, email } = load("profile");
     const profile = storage.load("profile");
     console.log(profile);
 
@@ -35,8 +37,8 @@ export async function setUpdateProfileListener() {
 
       const updatedProfile = await getProfile(name);
 
-        // Save the profile to local storage
-        storage.save("profile", updatedProfile);
+      // Save the profile to local storage
+      storage.save("profile", updatedProfile);
     });
   }
 }

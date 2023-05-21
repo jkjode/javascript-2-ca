@@ -2,6 +2,11 @@ import { login } from "../api/auth/login.mjs";
 import displayMessage from "../ui/common/displaymsg.mjs";
 import * as storage from "../storage/index.mjs";
 
+/**
+ * @description Sets up a submit event listener for the login form and handles the login process.
+ */
+
+
 export function setLoginFormListener() {
   const form = document.querySelector("#loginForm");
 
