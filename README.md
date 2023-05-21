@@ -40,3 +40,11 @@ User can create a comment on a post
 User can edit profile media
 User can follow/unfollow a profile
 User can react to a post content item
+
+## Trello Board
+
+There were very vague instructions on how to use Trello for this project, so I just made a board and added the tasks I thought I needed to do. I didn't use it much after that.
+It was stated that you MAY use Trello or GitHub Projects, I chose Trello for this project with my free account (free trial used and expired).
+As I worked alone on this project I had little need for a project management tool, but as it MAY have been intended as a requirement and for learning purposes I made a Trello board.
+
+https://trello.com/b/AL7wsYaf/js2
