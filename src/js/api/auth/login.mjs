@@ -4,10 +4,10 @@ const action = "/auth/login";
 const method = "post";
 
 /**
- * 
- * @param {object} profile 
- * @description 
- * @returns 
+ * @description This function logs in a user.
+ * @param {Object} profile  - The user profile object
+ * @returns {Promise<Object>} A Promise that resolves to the login response.
+ * @throws {Error} If there is an error during the login process.
  */
 
 export async function login(profile) {

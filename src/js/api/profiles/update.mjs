@@ -4,6 +4,12 @@ import { API_SOCIAL_URL } from "../../api/constants.mjs";
 const action = "/profiles";
 const method = "put";
 
+/**
+ * @Description This function updates a profile.
+ * @param {object} profileData  - The profile data object
+ * @returns an updated profile object.
+ */
+
 export async function updateProfile(profileData) {
   if (!profileData.name) {
     throw new Error("Update requires a name");
