@@ -2,6 +2,8 @@ export * from "./createPost.mjs";
 export * from "./login.mjs";
 export * from "./register.mjs";
 export * from "./updatePost.mjs";
-export * from "./updateProfile.mjs"
-export * from "./postsSearchAndFilter.mjs"
-export * from "./readProfile.mjs"
+export * from "./updateProfile.mjs";
+export * from "./postsSearchAndFilter.mjs";
+export * from "./readProfile.mjs";
+export * from "./checkIfLoggedIn.mjs";
+export * from "./logoutHandler.mjs";

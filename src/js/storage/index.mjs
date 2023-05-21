@@ -14,3 +14,17 @@ export function load(key) {
 export function remove(key) {
   localStorage.removeItem(key);
 }
+
+export function checkIfLoggedIn() {
+  const token = load("token");
+  if (token) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+export function logout() {
+  remove("token");
+  remove("profile");
+}

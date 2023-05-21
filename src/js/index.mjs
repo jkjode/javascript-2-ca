@@ -4,6 +4,9 @@ import * as listeners from "./handlers/index.mjs";
 
 const path = location.pathname;
 
+listeners.checkIfLoggedIn(path);
+listeners.logoutHandler();
+
 if (path === "/profile/login/") {
   listeners.setLoginFormListener();
 } else if (path === "/profile/register/") {
@@ -31,4 +34,6 @@ if (path === "/profile/login/") {
   templates.renderOnePostTemplate(post, container);
 } else if (path === "/profile/") {
   listeners.setViewProfileListener();
-}
+} 
+
+

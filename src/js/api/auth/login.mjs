@@ -3,6 +3,13 @@ import { API_SOCIAL_URL } from "../constants.mjs";
 const action = "/auth/login";
 const method = "post";
 
+/**
+ * 
+ * @param {object} profile 
+ * @description 
+ * @returns 
+ */
+
 export async function login(profile) {
   const loginURL = API_SOCIAL_URL + action;
   const body = JSON.stringify(profile);
@@ -24,8 +31,6 @@ export async function login(profile) {
 
   throw new Error(json.errors[0].message);
 
-  // const { accessToken, ...user } = await response.json();
-
-
-  // alert("You have successfully logged in!");
 }
+
+
