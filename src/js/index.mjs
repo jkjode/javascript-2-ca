@@ -20,7 +20,6 @@ if (path === "/profile/login/") {
 } else if (path === "/feed/") {
   async function testTemplate() {
     const posts = await postMethods.getPosts();
-    console.log(posts);
     const container = document.querySelector("#posts");
     templates.renderPostTemplates(posts, container);
   }
