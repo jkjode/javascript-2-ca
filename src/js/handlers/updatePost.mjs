@@ -30,10 +30,14 @@ export async function setUpdatePostListener() {
       const form = event.target;
       const formData = new FormData(form);
       const post = Object.fromEntries(formData.entries());
+      post.tags = post.tags.split(",").map((tag) => tag.trim());
       post.id = id;
 
       // Send data to the API
       updatePost(post);
+
+      // Redirect to the profile
+      location.assign("/profile/");
     });
   }
 }

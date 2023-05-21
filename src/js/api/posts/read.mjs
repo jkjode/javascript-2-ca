@@ -7,8 +7,10 @@ import { API_SOCIAL_URL } from "../../api/constants.mjs";
 
 const action = "/posts";
 
-export async function getPosts() {
-  const getPostsURL = `${API_SOCIAL_URL}${action}`;
+export async function getPosts(tag, sortType) {
+  const getPostsURL = `${API_SOCIAL_URL}${action}?_author=true${tag ? `&_tag=${tag}` : ""}${
+    sortType ? `&sort=created&sortOrder=${sortType}` : ""
+  }`;
 
   const response = await authFetch(getPostsURL);
 

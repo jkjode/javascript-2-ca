@@ -44,9 +44,7 @@
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="/profile/">Profile</a>
-                <a class="dropdown-item" href="/profile/edit/"
-                  >Edit Profile</a
-                >
+                <a class="dropdown-item" href="/profile/edit/">Edit Profile</a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#">Logout</a>
               </div>
@@ -58,13 +56,17 @@
               <a class="nav-link" href="/feed/">Posts</a>
             </li>
           </ul>
+          <!-- Search tag -->
           <div class="">
-            <form class="form-inline my-2 my-lg-0 d-flex align-items-center">
+            <form class="form-inline my-2 my-lg-0 d-flex align-items-center" id="filterByTagForm">
               <input
                 class="form-control mr-sm-2 flex-grow-1"
-                type="search"
-                placeholder="Search for posts"
+                type="text"
+                placeholder="Search for tag in posts"
                 aria-label="Search"
+                id="filterByTag"
+                name="filterByTag"
+                pattern="^[A-Za-z0-9]*$"
               />
               <button
                 class="btn btn-outline-success my-2 mr-sm-2"
@@ -74,15 +76,29 @@
               </button>
             </form>
           </div>
+          <!-- End of search -->
         </div>
       </nav>
       <main class="bg-dark text-light mt-5">
         <div class="container">
           <div class="post row p-5">
+            <!-- sorting function -->
             <div class="justify-content-center">
-              <a href="/post/create/" class="btn btn-success my-2 mr-sm-2 w-25">Write a post</a>
-              <a href="/post/edit/" class="btn btn-success my-2 mr-sm-2 w-25">Edit your post</a>
-              <a href="/post/update/" class="btn btn-success my-2 mr-sm-2 w-25">Update a post</a>
+              <a href="/post/create/" class="btn btn-success my-2 mr-sm-2 w-25"
+                >Write a post</a
+              >
+
+              <!-- Sort feed -->
+
+              <form id="sortPostsForm" class="outline-success ms-2 mt-3">
+                <select name="sortType" id="sortType">
+                  <option value="desc">Newest</option>
+                  <option value="asc">Oldest</option>
+                </select>
+                <button type="submit" class="btn btn-success">Sort</button>
+              </form>
+
+              <!-- end of sort feed -->
             </div>
             <div class="column col-sm" id="posts">
               <!-- Content here -->
